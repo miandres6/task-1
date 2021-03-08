@@ -28,3 +28,5 @@ vector_pares=c(vector_1_100[!vector_1_100%in%vector_impares])
 #2.Limpiar una base de datos
 library("readxl")
 cultivos=read_excel("data/input/cultivos.xlsx")
+
+
