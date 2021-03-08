@@ -16,7 +16,7 @@ for(i in 1:100){
 #vector que contiene los numeros del 1 al 100
 vector
 #vector que contiene los numeros primos del 1 al 99
-primos
+primos #Comentario de prueba
 
 #2. Limpiar una base de datos
 #Cargar bases de datos
