@@ -58,3 +58,13 @@ variables=colnames(cultivos[,5:columnas])
 
 resultado=melt(data=cultivos, id.vars = c("CODDEPTO","DEPARTAMENTO","CODMPIO","MUNICIPIO"), measure.vars = variables, value.name = "Hectáreas")
 View(resultado)
+
+#3. GEIH
+#3.1. Importar
+pacman::p_load(tidyverse,readxl,haven)
+caracteristicas_generales=readRDS(file='data/input/2019/Cabecera - Caracteristicas generales (Personas).rds')%>%
+  dplyr::select(.,directorio , secuencia_p , orden)
+
+ocupados=readRDS(file='data/input/2019/Cabecera - Ocupados.rds') %>%
+  dplyr::select(.,directorio , secuencia_p , orden)
+View(ocupados)
