@@ -62,9 +62,6 @@ View(resultado)
 #3. GEIH
 #3.1. Importar
 pacman::p_load(tidyverse,readxl,haven)
-caracteristicas_generales=readRDS(file='data/input/2019/Cabecera - Caracteristicas generales (Personas).rds')%>%
-  dplyr::select(.,directorio , secuencia_p , orden)
-
-ocupados=readRDS(file='data/input/2019/Cabecera - Ocupados.rds') %>%
-  dplyr::select(.,directorio , secuencia_p , orden)
+caracteristicas_generales=readRDS(file='data/input/2019/Cabecera - Caracteristicas generales (Personas).rds')
+ocupados=readRDS(file='data/input/2019/Cabecera - Ocupados.rds') 
 View(ocupados)
