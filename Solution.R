@@ -1,5 +1,5 @@
 #==============================================================================#
-# Autores: María Vallejo, Andrea Cortes
+# Autores: Maria Vallejo, Andrea Cortes, Andres Castillo
 # Colaboradores:
 # Fecha elaboracion:08 de marzo de 2021
 # Ultima modificacion: 
