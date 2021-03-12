@@ -1,8 +1,7 @@
 #==============================================================================#
 # Autores: Maria Vallejo, Andrea Cortes, Andres Castillo
-# Colaboradores:
-# Fecha elaboracion:08 de marzo de 2021
-# Ultima modificacion: 
+# # Fecha elaboracion:08 de marzo de 2021
+# Ultima modificacion: 12 de marzo de 2021
 # Version de R: 4.0.3
 #==============================================================================#
 pacman::p_load(tidyverse,viridis,forcats,gapminder)
@@ -68,4 +67,9 @@ ocupados=readRDS(file='data/input/2019/Cabecera - Ocupados.rds')
 nueva_base=full_join(caracteristicas_generales,ocupados,by=c('directorio','secuencia_p','orden'))
 View(nueva_base)
 
+#Descriptivas
+
+
+#Guardar la base
+saveRDS(object = nueva_base , file = "data/output/NuevaBase.rds")
 
