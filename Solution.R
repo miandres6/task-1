@@ -53,10 +53,9 @@ View(cultivos)
 #Pivotear a formato long
 library(reshape2)
 
-variables_0=colnames(cultivos[,1:4])
 variables=colnames(cultivos[,5:columnas])
 
-resultado=melt(data=cultivos, id.vars = c("CODDEPTO","DEPARTAMENTO","CODMPIO","MUNICIPIO"), measure.vars = variables, value.name = "Hectáreas")
+resultado=melt(data=cultivos, id.vars = c("CODDEPTO","DEPARTAMENTO","CODMPIO","MUNICIPIO"), measure.vars = variables, value.name = "Hectareas")
 View(resultado)
 
 #3. GEIH
@@ -64,4 +63,9 @@ View(resultado)
 pacman::p_load(tidyverse,readxl,haven)
 caracteristicas_generales=readRDS(file='data/input/2019/Cabecera - Caracteristicas generales (Personas).rds')
 ocupados=readRDS(file='data/input/2019/Cabecera - Ocupados.rds') 
-View(ocupados)
+
+#Unir base de datos en una sola
+nueva_base=full_join(caracteristicas_generales,ocupados,by=c('directorio','secuencia_p','orden'))
+View(nueva_base)
+
+
